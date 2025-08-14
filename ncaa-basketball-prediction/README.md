@@ -22,8 +22,10 @@ Preprocessing:
 
 **Methods**
 
-a. L1 Regularization (Lasso): Feature selection + coefficient shrinkage
+a. L1 Regularization (Lasso): Feature selection + coefficient shrinkage 
+
 b. L2 Regularization (Ridge): Coefficient shrinkage for generalization
+
 c. Neural Network (PyTorch): Feedforward model with two hidden layers, ReLU activation, and dropout
 
 Evaluation Metrics: MSE, RMSE, MAE, R², plus residual and Q-Q plots
