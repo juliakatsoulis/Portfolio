@@ -1,47 +1,61 @@
-# NCAA Basketball Win Prediction
+# Post-COVID: A Comparison of Regularization in Linear Regression and Neural Networks
+Authors: Elena Muyo de Bonrostro, Colby Eagan, Julia Katsoulis, Charles Moseley, Joseph Sachtleben
 
-
-This project predicts NCAA men’s basketball win percentages using multiple statistical and machine learning models. The analysis compares model performance and identifies the most influential predictors of team success.
+Course: STOR 565 – Department of Statistics and Operations Research, UNC-Chapel Hill
 
 **Overview**
 
-
-Using NCAA basketball season data (2022–2025), this project explores how offensive, defensive, and schedule-related statistics affect team win percentages. Models used include:
-1. LASSO Regression
-2. Ridge Regression
-3. Neural Network
-The goal was to compare predictive accuracy and interpretability across methods.
+This project predicts NCAA men’s basketball win percentages in the post-COVID era using statistical and machine learning models. We compare L1 (Lasso), L2 (Ridge), and Dropout-Regularized Neural Networks to evaluate their predictive performance and interpretability.
+The motivation stems from changes in the college basketball landscape — the transfer portal, NIL policies, and extended eligibility — which altered historical patterns, making regularization and robust modeling increasingly important.
 
 **Data**
-Source: Kaggle NCAA Men’s Basketball datasets (adjusted for post-COVID seasons)
-Variables: Effective Field Goal Percentage (Offense & Defense), Turnover Rates, Offensive Rebounds, Strength of Schedule, Adjusted Offensive/Defensive Efficiency, and others.
+
+Source: Kaggle NCAA basketball datasets (2022–2025 seasons)
 Preprocessing:
 Standardized team names
-Removed redundant variables
-Calculated win percentages
-One-hot encoded conference variable
+Removed redundant/postseason variables
+Engineered win percentage variable
+One-hot encoded categorical conference variable
+Z-score normalization applied before modeling
 
-**Methods & Tools**
-Languages: Python
-Libraries: pandas, NumPy, scikit-learn, matplotlib, ggplot2, dplyr, caret
-Techniques: Data cleaning, exploratory data analysis, LASSO & Ridge regression, neural network modeling, cross-validation, residual analysis, Q-Q plots
+**Methods**
+
+L1 Regularization (Lasso): Feature selection + coefficient shrinkage
+L2 Regularization (Ridge): Coefficient shrinkage for generalization
+Neural Network (PyTorch): Feedforward model with two hidden layers, ReLU activation, and dropout
+Evaluation Metrics: MSE, RMSE, MAE, R², plus residual and Q-Q plots
 
 **Results**
-Best Model: LASSO with Cross-Validation (R² = 0.8446, RMSE = 0.066)
-Top Predictors: Strength of Schedule (SOS_Rating), Adjusted Offensive Efficiency (ADJOE), Adjusted Defensive Efficiency (ADJDE), Effective Field Goal % (Offense & Defense)
-Key Insights:
-Teams with stronger offensive efficiency and better shooting tend to win more.
-Higher strength of schedule can negatively impact win percentage due to tougher opponents.
+
+Lasso (α=0.01): R² ≈ 0.804, RMSE ≈ 0.074
+
+LassoCV (α=0.0003): R² ≈ 0.845, RMSE ≈ 0.066
+
+Ridge (α=0.01): R² ≈ 0.842, RMSE ≈ 0.067 *RidgeCV performed the same
+
+Neural Network: R² ≈ 0.860, RMSE ≈ 0.063
+
+Key Predictors Identified: Strength of Schedule (SOS_Rating), Adjusted Offensive Efficiency (ADJOE), Adjusted Defensive Efficiency (ADJDE), Effective Field Goal % (Offense & Defense), Turnover Rates
+
+**Insights**
+
+Neural networks captured complex, nonlinear interactions and achieved the best accuracy.
+Linear models remained competitive and offered interpretability through coefficients.
+Tradeoff: interpretability (Lasso, Ridge) vs predictive power (Neural Network).
 
 **Skills Demonstrated**
-Data preprocessing & feature engineering
-Regularization techniques (L1, L2)
-Neural network implementation
-Model comparison using R², RMSE, MAE
-Visualization & interpretation of model diagnostics
+
+Data cleaning & feature engineering
+Regularization methods (Lasso, Ridge)
+Neural network modeling with PyTorch
+Cross-validation & hyperparameter tuning
+Model diagnostics (residual plots, Q-Q plots)
+Balancing interpretability vs predictive accuracy
 
 **Files**
-data_cleaning.R – Prepares and cleans dataset
-modeling_lasso_ridge.R – Fits LASSO & Ridge models
-neural_network.py – Fits and evaluates neural network model
-plots/ – Residual plots, Q-Q plots, and predictor importance charts
+
+post_covid_basketball_report.pdf – Full written report (includes visuals & analysis)
+
+lasso_ridge_models.R – Python code for Lasso and Ridge regression
+
+neural_network.py – Python code for neural network implementation
