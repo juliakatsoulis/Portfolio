@@ -22,20 +22,19 @@ Preprocessing:
 
 **Methods**
 
-L1 Regularization (Lasso): Feature selection + coefficient shrinkage
-L2 Regularization (Ridge): Coefficient shrinkage for generalization
-Neural Network (PyTorch): Feedforward model with two hidden layers, ReLU activation, and dropout
+a. L1 Regularization (Lasso): Feature selection + coefficient shrinkage
+b. L2 Regularization (Ridge): Coefficient shrinkage for generalization
+c. Neural Network (PyTorch): Feedforward model with two hidden layers, ReLU activation, and dropout
+
 Evaluation Metrics: MSE, RMSE, MAE, R², plus residual and Q-Q plots
 
 **Results**
 
-Lasso (α=0.01): R² ≈ 0.804, RMSE ≈ 0.074
+a. Lasso (α=0.01): R² ≈ 0.804, RMSE ≈ 0.074, LassoCV (α=0.0003): R² ≈ 0.845, RMSE ≈ 0.066
 
-LassoCV (α=0.0003): R² ≈ 0.845, RMSE ≈ 0.066
+b. Ridge (α=0.01): R² ≈ 0.842, RMSE ≈ 0.067 *RidgeCV performed the same
 
-Ridge (α=0.01): R² ≈ 0.842, RMSE ≈ 0.067 *RidgeCV performed the same
-
-Neural Network: R² ≈ 0.860, RMSE ≈ 0.063
+c. Neural Network: R² ≈ 0.860, RMSE ≈ 0.063
 
 Key Predictors Identified: Strength of Schedule (SOS_Rating), Adjusted Offensive Efficiency (ADJOE), Adjusted Defensive Efficiency (ADJDE), Effective Field Goal % (Offense & Defense), Turnover Rates
 
