@@ -11,12 +11,14 @@ The motivation stems from changes in the college basketball landscape — the tr
 **Data**
 
 Source: Kaggle NCAA basketball datasets (2022–2025 seasons)
+
 Preprocessing:
-Standardized team names
-Removed redundant/postseason variables
-Engineered win percentage variable
-One-hot encoded categorical conference variable
-Z-score normalization applied before modeling
+
+1. Standardized team names
+2. Removed redundant/postseason variables
+3. Engineered win percentage variable
+4. One-hot encoded categorical conference variable
+5. Z-score normalization applied before modeling
 
 **Methods**
 
