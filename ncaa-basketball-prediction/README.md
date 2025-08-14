@@ -54,8 +54,8 @@ Balancing interpretability vs predictive accuracy
 
 **Files**
 
+lasso_ridge_models.ipynb – Python code for Lasso and Ridge regression
+
+neural_network.ipynb – Python code for neural network implementation
+
 post_covid_basketball_report.pdf – Full written report (includes visuals & analysis)
-
-lasso_ridge_models.R – Python code for Lasso and Ridge regression
-
-neural_network.py – Python code for neural network implementation
