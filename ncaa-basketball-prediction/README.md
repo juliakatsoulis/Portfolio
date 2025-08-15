@@ -49,10 +49,15 @@ Tradeoff: interpretability (Lasso, Ridge) vs predictive power (Neural Network).
 **Skills Demonstrated**
 
 Data cleaning & feature engineering
+
 Regularization methods (Lasso, Ridge)
+
 Neural network modeling with PyTorch
+
 Cross-validation & hyperparameter tuning
+
 Model diagnostics (residual plots, Q-Q plots)
+
 Balancing interpretability vs predictive accuracy
 
 **Files**
