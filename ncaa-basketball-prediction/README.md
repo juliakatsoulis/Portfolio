@@ -1,63 +1,6 @@
 # Predicting NCAA Men's Basketball Win Percentages Post-COVID
-Authors: Elena Muyo de Bonrostro, Colby Eagan, Julia Katsoulis, Charles Moseley, Joseph Sachtleben
 
-
-**Overview**
-
-This project predicts NCAA men’s basketball win percentages in the post-COVID era using statistical and machine learning models. We compare L1 (Lasso), L2 (Ridge), and Dropout-Regularized Neural Networks to evaluate their predictive performance and interpretability.
-The motivation stems from changes in the college basketball landscape — the transfer portal, NIL policies, and extended eligibility — which altered historical patterns, making regularization and robust modeling increasingly important.
-
-**Data**
-
-Source: Kaggle NCAA basketball datasets (2022–2025 seasons)
-
-Preprocessing:
-
-1. Standardized team names
-2. Removed redundant/postseason variables
-3. Engineered win percentage variable
-4. One-hot encoded categorical conference variable
-5. Z-score normalization applied before modeling
-
-**Methods**
-
-a. L1 Regularization (Lasso): Feature selection + coefficient shrinkage 
-
-b. L2 Regularization (Ridge): Coefficient shrinkage for generalization
-
-c. Neural Network (PyTorch): Feedforward model with two hidden layers, ReLU activation, and dropout
-
-Evaluation Metrics: MSE, RMSE, MAE, R², plus residual and Q-Q plots
-
-**Results**
-
-a. Lasso (α=0.01): R² ≈ 0.804, RMSE ≈ 0.074, LassoCV (α=0.0003): R² ≈ 0.845, RMSE ≈ 0.066
-
-b. Ridge (α=0.01): R² ≈ 0.842, RMSE ≈ 0.067 *RidgeCV performed the same
-
-c. Neural Network: R² ≈ 0.860, RMSE ≈ 0.063
-
-Key Predictors Identified: Strength of Schedule (SOS_Rating), Adjusted Offensive Efficiency (ADJOE), Adjusted Defensive Efficiency (ADJDE), Effective Field Goal % (Offense & Defense), Turnover Rates
-
-**Insights**
-
-Neural networks captured complex, nonlinear interactions and achieved the best accuracy.
-Linear models remained competitive and offered interpretability through coefficients.
-Tradeoff: interpretability (Lasso, Ridge) vs predictive power (Neural Network).
-
-**Skills Demonstrated**
-
-Data cleaning & feature engineering
-
-Regularization methods (Lasso, Ridge)
-
-Neural network modeling with PyTorch
-
-Cross-validation & hyperparameter tuning
-
-Model diagnostics (residual plots, Q-Q plots)
-
-Balancing interpretability vs predictive accuracy
+This project analyzes NCAA men’s basketball seasons (2022–2025) to predict team win percentages in the post-COVID era, where policy changes like the transfer portal, NIL, and extended eligibility reshaped historical patterns. Using Kaggle datasets, we cleaned and engineered features (standardized team names, one-hot encoded conferences, created win percentage, applied z-score normalization) before applying Lasso (L1), Ridge (L2), and a dropout-regularized neural network. Models were tuned via cross-validation and evaluated with MSE, RMSE, MAE, and R². Results showed the neural network achieved the best accuracy (R² ≈ 0.86, RMSE ≈ 0.063), while Lasso and Ridge remained competitive and offered interpretability by identifying key predictors such as strength of schedule, offensive/defensive efficiency, and turnover rates. This work highlights the tradeoff between predictive power and interpretability, and demonstrates skills in data preprocessing, regularization, neural network modeling with PyTorch, and model diagnostics.
 
 **Files**
 
