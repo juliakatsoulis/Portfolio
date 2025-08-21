@@ -1,7 +1,6 @@
 # Predicting NCAA Men's Basketball Win Percentages Post-COVID
 Authors: Elena Muyo de Bonrostro, Colby Eagan, Julia Katsoulis, Charles Moseley, Joseph Sachtleben
 
-Course: STOR 565 – Department of Statistics and Operations Research, UNC-Chapel Hill
 
 **Overview**
 
