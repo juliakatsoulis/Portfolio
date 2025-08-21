@@ -3,7 +3,7 @@
 This folder contains projects in clustering, optimization, and binary classification. My work highlights both the mathematical foundations and the practical implementation of algorithms, with a focus on interpretability and performance evaluation.
 
 
-# files
+# Files
 
 **binary_classification.ipynb:**
 
@@ -15,3 +15,4 @@ I implemented and compared gradient descent optimization methods to minimize com
 
 **tree_clustering.ipynb:**
 
+I used decision trees, K-Means clustering, and random forests to explore supervised and unsupervised learning methods in Python. Using scikit-learn, I trained and tuned a Decision Tree Classifier on a wine dataset with 5-fold cross-validation, achieving ~94% test accuracy, and converted the trained tree into a nested dictionary representation. I also built K-Means from scratch, applied it to customer segmentation data, determined the optimal number of clusters with the elbow method, and interpreted segments such as impulse buyers and luxury buyers. Finally, I trained Random Forest and Logistic Regression models on the ProPublica COMPAS dataset to analyze predictors of recidivism, evaluated feature importance, and discussed algorithmic fairness, showing how age and criminal history dominated predictions while race still had measurable influence.
